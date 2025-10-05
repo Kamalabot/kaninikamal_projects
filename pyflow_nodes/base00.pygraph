@@ -1,0 +1,21 @@
+{
+    "name": "root",
+    "category": "",
+    "vars": [
+        {
+            "name": "var",
+            "value": null,
+            "dataType": "AnyPin",
+            "accessLevel": "public",
+            "package": "PyFlowBase",
+            "uuid": "3e115c5e-bb0e-4be0-bd9b-9b25ae8efb03",
+            "structure": "Single"
+        }
+    ],
+    "nodes": [],
+    "depth": 1,
+    "isRoot": true,
+    "parentGraphName": "None",
+    "fileVersion": "3.0.0",
+    "activeGraph": "root"
+}

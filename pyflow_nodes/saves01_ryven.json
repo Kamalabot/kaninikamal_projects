@@ -1,0 +1,179 @@
+{
+    "general info": {
+        "type": "Ryven project file",
+        "ryven version": "3.5.0"
+    },
+    "required packages": [],
+    "GID": 2,
+    "version": "0.5.0",
+    "flows": {
+        "hello world": {
+            "GID": 5,
+            "algorithm mode": "data",
+            "nodes": [
+                {
+                    "GID": 6,
+                    "version": "v0.1",
+                    "identifier": "built_in.SetVar_Node",
+                    "state data": "gASVDgAAAAAAAAB9lIwGYWN0aXZllIhzLg==",
+                    "additional data": {},
+                    "inputs": [
+                        {
+                            "GID": 7,
+                            "type": "exec",
+                            "label": ""
+                        },
+                        {
+                            "GID": 8,
+                            "type": "data",
+                            "label": "var",
+                            "default": {
+                                "GID": 19,
+                                "identifier": "Data",
+                                "serialized": "gASVCgAAAAAAAACMBm5ld3ZhcpQu"
+                            },
+                            "has widget": true,
+                            "widget name": "varname",
+                            "widget pos": "besides",
+                            "widget data": "gASVcAAAAAAAAAB9lIwDdmFslIwOcnl2ZW5jb3JlLkRhdGGUjAREYXRhlJOUKYGUfZQojAlnbG9iYWxfaWSUSxmMDnByZXZfZ2xvYmFsX2lklE6MDHByZXZfdmVyc2lvbpROjAhfcGF5bG9hZJSMBm5ld3ZhcpR1YnMu"
+                        },
+                        {
+                            "GID": 9,
+                            "type": "data",
+                            "label": "val",
+                            "default": {
+                                "GID": 22,
+                                "identifier": "Data",
+                                "serialized": "gASVBwAAAAAAAACMAzEwMJQu"
+                            },
+                            "has widget": true,
+                            "widget name": "val",
+                            "widget pos": "besides",
+                            "widget data": "gASVbQAAAAAAAAB9lIwDdmFslIwOcnl2ZW5jb3JlLkRhdGGUjAREYXRhlJOUKYGUfZQojAlnbG9iYWxfaWSUSxqMDnByZXZfZ2xvYmFsX2lklE6MDHByZXZfdmVyc2lvbpROjAhfcGF5bG9hZJSMAzEwMJR1YnMu"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "GID": 10,
+                            "type": "exec",
+                            "label": ""
+                        },
+                        {
+                            "GID": 11,
+                            "type": "data",
+                            "label": "val"
+                        }
+                    ],
+                    "pos x": 56.0,
+                    "pos y": 151.0,
+                    "unconnected ports hidden": false,
+                    "collapsed": false,
+                    "actions": {
+                        "update shape": {
+                            "method": "update_shape"
+                        },
+                        "hide unconnected ports": {
+                            "method": "hide_unconnected_ports"
+                        },
+                        "change title": {
+                            "method": "change_title"
+                        },
+                        "console ref": {
+                            "method": "console_ref_monkeypatch"
+                        }
+                    },
+                    "display title": "set var",
+                    "inspector widget": {}
+                },
+                {
+                    "GID": 23,
+                    "version": "v0.2",
+                    "identifier": "built_in.Result_Node",
+                    "state data": "gAR9lC4=",
+                    "additional data": {},
+                    "inputs": [
+                        {
+                            "GID": 24,
+                            "type": "data",
+                            "label": "",
+                            "has widget": false
+                        }
+                    ],
+                    "outputs": [],
+                    "pos x": 288.0,
+                    "pos y": 151.0,
+                    "main widget data": "gAR9lC4=",
+                    "unconnected ports hidden": false,
+                    "collapsed": false,
+                    "actions": {
+                        "update shape": {
+                            "method": "update_shape"
+                        },
+                        "hide unconnected ports": {
+                            "method": "hide_unconnected_ports"
+                        },
+                        "change title": {
+                            "method": "change_title"
+                        },
+                        "console ref": {
+                            "method": "console_ref_monkeypatch"
+                        }
+                    },
+                    "display title": "result",
+                    "inspector widget": {}
+                }
+            ],
+            "connections": [
+                {
+                    "parent node index": 0,
+                    "output port index": 1,
+                    "connected node": 1,
+                    "connected input port index": 0
+                }
+            ],
+            "output data": [],
+            "flow view": {
+                "drawings": [],
+                "view size": [
+                    10000.0,
+                    7000.0
+                ]
+            }
+        }
+    },
+    "addons": {
+        "Logging": {
+            "GID": 3,
+            "version": "0.0.1",
+            "custom state": {}
+        },
+        "Variables": {
+            "GID": 4,
+            "version": "0.4",
+            "custom state": {
+                "5": {}
+            }
+        }
+    },
+    "geometry": "01d9d0cb0003000000000000fffffff800000555000002cf000000080000001f000005e30000033e00000000020000000556000000000000001700000555000002cf",
+    "state": "000000ff00000000fd00000002000000000000012400000192fc0200000001fc00000021000001920000014c0100001efa000000000200000002fb000000140066006c006f00770073005f0064006f0063006b0100000000ffffffff0000008100fffffffb00000014006e006f006400650073005f0064006f0063006b0100000000ffffffff0000012d00ffffff0000000300000556000000f2fc0100000001fb000000160063006f006e0073006f006c00650044006f0063006b0100000000000005560000005f00ffffff0000041e0000019200000004000000040000000800000008fc00000000",
+    "flow_uis": {
+        "5": {
+            "geometry": "01d9d0cb000300000000000000000000000004070000015c0000000000000000ffffffffffffffff000000000000000005560000000000000000000004070000015c",
+            "state": "000000ff00000000fd0000000100000001000002620000015dfc0200000001fc000000000000015d000000d90000005dfa000000000200000006fb0000001c0069006e00730070006500630074006f0072005f0064006f0063006b0100000000ffffffff000000ba00fffffffb000000220075006e0064006f005f0068006900730074006f00720079005f0064006f0063006b0100000000ffffffff0000005800fffffffb0000001a00730065007400740069006e00670073005f0064006f0063006b0100000000ffffffff0000003e0000003efb0000001c007600610072006900610062006c00650073005f0064006f0063006b0100000000ffffffff0000008100fffffffb00000016006c006f0067006700650072005f0064006f0063006b0100000000ffffffff0000004a00fffffffb000000160073006f0075007200630065005f0064006f0063006b0100000000ffffffff0000009200ffffff000001920000015d00000004000000040000000800000008fc00000000",
+            "view": {
+                "m11": 1.0,
+                "m12": 0.0,
+                "m13": 0.0,
+                "m21": 0.0,
+                "m22": 1.0,
+                "m23": 0.0,
+                "m31": 0.0,
+                "m32": 0.0,
+                "m33": 1.0,
+                "v_scroll": 0,
+                "h_scroll": 0
+            }
+        }
+    }
+}
