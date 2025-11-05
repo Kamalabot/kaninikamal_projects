@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Robot on Wheel Loader</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Polyfill for import maps (recommended for browser compatibility) -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.2/dist/es-module-shims.js"></script>
+
+    <!-- Import Map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/examples/jsm/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="controls">
+      <button id="increase">Zoom In</button>
+      <button id="decrease">Zoom Out</button>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
