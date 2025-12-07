@@ -1,0 +1,7 @@
+HR Onboarding|Streamline new hire process|HR,Recruiter,Manager
+Purpose: Reduce time-to-hire by 30%
+Job Req Received|start|HR/HR
+Post Job Ad|task|HR/Recruiter
+Screen Resumes?|decision|HR/Recruiter
+Conduct Interview|task|HR/Manager
+Send Offer & Onboard|end|HR/HR
