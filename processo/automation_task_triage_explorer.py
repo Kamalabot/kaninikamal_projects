@@ -60,13 +60,36 @@ def compute_decision(score):
     return "Defer"
 
 
+class ExplorerWindow(tk.Toplevel):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.title("Automation Backlog")
+        self.geometry("720x400")
+
+        self.tree = ttk.Treeview(self, columns=("task", "decision", "score", "frequency", "timestamp"), show="headings")
+        for col in self.tree["columns"]:
+            self.tree.heading(col, text=col.title())
+            self.tree.column(col, anchor="w")
+
+        self.tree.pack(fill="both", expand=True, padx=10, pady=10)
+
+        self.load_data()
+
+    def load_data(self):
+        conn = sqlite3.connect(DB_FILE)
+        cur = conn.cursor()
+        cur.execute("SELECT task, decision, score, frequency, timestamp FROM backlog ORDER BY id DESC")
+        for row in cur.fetchall():
+            self.tree.insert("", "end", values=row)
+        conn.close()
+
 # ---------------- GUI App ----------------
 
 class AutomationTriageApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Automation Task Triage")
-        self.geometry("500x460")
+        self.geometry("500x600")
         self.resizable(False, False)
 
         self.task_name = tk.StringVar()
@@ -145,33 +168,6 @@ class AutomationTriageApp(tk.Tk):
             v.set(0)
         for v in self.interface_vars.values():
             v.set(False)
-
-
-class ExplorerWindow(tk.Toplevel):
-    def __init__(self, parent):
-        super().__init__(parent)
-        self.title("Automation Backlog")
-        self.geometry("720x400")
-
-        self.tree = ttk.Treeview(self, columns=("task", "decision", "score", "frequency", "timestamp"), show="headings")
-        for col in self.tree["columns"]:
-            self.tree.heading(col, text=col.title())
-            self.tree.column(col, anchor="w")
-
-        self.tree.pack(fill="both", expand=True, padx=10, pady=10)
-
-        self.load_data()
-
-    def load_data(self):
-        conn = sqlite3.connect(DB_FILE)
-        cur = conn.cursor()
-        cur.execute("SELECT task, decision, score, frequency, timestamp FROM backlog ORDER BY id DESC")
-        for row in cur.fetchall():
-            self.tree.insert("", "end", values=row)
-        conn.close()
-
-
-    
 
 init_db()
 
